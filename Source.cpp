@@ -128,7 +128,7 @@ int main() {
     readall(in, rp1, rp2, vr, m, len);
     printm(m, len);
     int rabota;
-    cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 0-Выход" << endl;
+    cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 3-Поиск самого солёного моря 0-Выход" << endl;
     cin >> rabota;
 
     while (rabota != 0) {
@@ -141,13 +141,13 @@ int main() {
         if (rabota == 2) {
             findinf(m, len,rabota);
         }
-        if (rabota = 3) {
+        if (rabota == 3) {
             cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
             cout << setw(30) << left << m[vr.findssea(m, len)].name << setw(34) << m[vr.findssea(m, len)].glubina << setw(38) << m[vr.findssea(m, len)].solenost << endl << endl;
             rabota = 0;
         }
         if (rabota == 0) {
-            cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 0-Выход" << endl;
+            cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 3-Поиск самого солёного моря 0-Выход" << endl;
             cin >> rabota;
         }
         else {
