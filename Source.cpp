@@ -67,6 +67,45 @@ bool compareSeaByName(const sea& a, const sea& b) {
     return A < B;
 }
 
+void printm(vector<sea> m, int len) {
+    cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
+    for (int i = 0; i < len; i++) {
+        m[i].print();
+    }
+}
+
+void findinf(vector<sea> m, int len, int &rabota) {
+    string f;
+    bool nalichiesea = 0;
+    cout << "Введите море о котором нужна информация: ";
+    cin >> f;
+    f = "\"" + f + "\"";
+    for (int i = 0; i < len; i++) {
+        if (f == m[i].name) {
+            cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
+            cout << setw(30) << left << m[i].name << setw(34) << m[i].glubina << setw(38) << m[i].solenost << endl << endl;
+            rabota = 0;
+            nalichiesea = 1;
+        }
+    }
+    if (nalichiesea == 0) {
+        cout << "Данное море не найдено" << endl;
+        rabota = 0;
+    }
+}
+
+
+void readall(istream& in, regex rp1, regex rp2, sea &vr, vector<sea>& m, int& len) {
+    while (!in.eof()) {
+        vr.read(in, rp1, rp2, vr);
+        vr.read(in, rp1, rp2, vr);
+        vr.read(in, rp1, rp2, vr);
+        m.push_back(vr);
+        len++;
+    }
+}
+
+
 int main() {
     ifstream in("text.txt");
     vector<sea> m;
@@ -75,69 +114,30 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     int len = 0;
-    int i = 0;
-    string a, b;
-    a = "\".*\"";
-    b = "-?\\d+\\.\\d+";
-    regex rp1(a);
-    regex rp2(b);
-
-    while (!in.eof()) {
-        vr.read(in, rp1, rp2, vr);
-        vr.read(in, rp1, rp2, vr);
-        vr.read(in, rp1, rp2, vr);
-        m.push_back(vr);
-        len++;
-    }
-
-    cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
-    for (int i = 0; i < len; i++) {
-        m[i].print();
-    }
-
-    int v;
+    regex rp1("\".*\""), rp2("-?\\d+\\.\\d+");
+    readall(in, rp1, rp2, vr, m, len);
+    printm(m, len);
+    int rabota;
     cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 0-Выход" << endl;
-    cin >> v;
+    cin >> rabota;
 
-    while (v != 0) {
-        if (v == 1) {
+    while (rabota != 0) {
+        if (rabota == 1) {
             sort(m.begin(), m.end(), compareSeaByName);
-
             cout << "\nОтсортированный список:" << endl;
-            cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
-            for (int i = 0; i < len; i++) {
-                m[i].print();
-            }
-            v = 0;
+            printm(m, len);
+            rabota = 0;
         }
-
-        if (v == 2) {
-            string f;
-            bool d = 0;
-            cout << "Введите море о котором нужна информация: ";
-            cin >> f;
-            f = "\"" + f + "\"";
-            for (int i = 0; i < len; i++) {
-                if (f == m[i].name) {
-                    cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
-                    cout << setw(30) << left << m[i].name << setw(34) << m[i].glubina << setw(38) << m[i].solenost << endl << endl;
-                    v = 0;
-                    d = 1;
-                }
-            }
-            if (d == 0) {
-                cout << "Данное море не найдено" << endl;
-                v = 0;
-            }
+        if (rabota == 2) {
+            findinf(m, len,rabota);
         }
-        if (v == 0) {
+        if (rabota == 0) {
             cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 0-Выход" << endl;
-            cin >> v;
+            cin >> rabota;
         }
         else {
             break;
         }
     }
-
     return 0;
 }
