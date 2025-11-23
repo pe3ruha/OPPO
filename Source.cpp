@@ -23,7 +23,17 @@ public:
 void sea::print() {
     cout << setw(30) << left << name << setw(34) << glubina << setw(38) << solenost << endl;
 }
-
+int sea::findssea(vector<sea> s, int len) {
+    float maxsol = 0;
+    int z = 0;
+    for (int i = 0; i < len; i++) {
+        if (s[i].solenost > maxsol) {
+            maxsol = s[i].solenost;
+            z = i;
+        }
+    }
+    return z;
+}
 void sea::read(istream& in, regex regN, regex regS, sea& vr) {
     string str;
     in >> str;
@@ -130,6 +140,11 @@ int main() {
         }
         if (rabota == 2) {
             findinf(m, len,rabota);
+        }
+        if (rabota = 3) {
+            cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
+            cout << setw(30) << left << m[vr.findssea(m, len)].name << setw(34) << m[vr.findssea(m, len)].glubina << setw(38) << m[vr.findssea(m, len)].solenost << endl << endl;
+            rabota = 0;
         }
         if (rabota == 0) {
             cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 0-Выход" << endl;
