@@ -49,6 +49,7 @@ bool compareSeaByName(const sea& a, const sea& b) {
     // –усский алфавит в правильном пор€дке
     string russianAlphabet = "јЅ¬√ƒ≈®∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏџ№Ёёя";
 
+
     // —равниваем по первому символу
     char FA = toupper(A[0]);
     char FB = toupper(B[0]);
