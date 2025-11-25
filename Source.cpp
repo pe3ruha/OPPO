@@ -84,7 +84,7 @@ void printm(vector<sea> m, int len) {
     }
 }
 
-void findinf(vector<sea> m, int len, int &rabota) {
+void findinf(vector<sea> m, int len) {
     string f;
     bool nalichiesea = 0;
     cout << "Введите море о котором нужна информация: ";
@@ -94,18 +94,16 @@ void findinf(vector<sea> m, int len, int &rabota) {
         if (f == m[i].name) {
             cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
             cout << setw(30) << left << m[i].name << setw(34) << m[i].glubina << setw(38) << m[i].solenost << endl << endl;
-            rabota = 0;
             nalichiesea = 1;
         }
     }
     if (nalichiesea == 0) {
         cout << "Данное море не найдено" << endl;
-        rabota = 0;
     }
 }
 
 
-void readall(istream& in, regex rp1, regex rp2, sea &vr, vector<sea>& m, int& len) {
+void readall(istream& in, regex rp1, regex rp2, sea& vr, vector<sea>& m, int& len) {
     while (!in.eof()) {
         vr.read(in, rp1, rp2, vr);
         vr.read(in, rp1, rp2, vr);
@@ -127,32 +125,39 @@ int main() {
     regex rp1("\".*\""), rp2("-?\\d+\\.\\d+");
     readall(in, rp1, rp2, vr, m, len);
     printm(m, len);
-    int rabota;
-    cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 3-Поиск самого солёного моря 0-Выход" << endl;
-    cin >> rabota;
 
-    while (rabota != 0) {
-        if (rabota == 1) {
-            sort(m.begin(), m.end(), compareSeaByName);
-            cout << "\nОтсортированный список:" << endl;
-            printm(m, len);
-            rabota = 0;
-        }
-        if (rabota == 2) {
-            findinf(m, len,rabota);
-        }
-        if (rabota == 3) {
-            cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
-            cout << setw(30) << left << m[vr.findssea(m, len)].name << setw(34) << m[vr.findssea(m, len)].glubina << setw(38) << m[vr.findssea(m, len)].solenost << endl << endl;
-            rabota = 0;
-        }
-        if (rabota == 0) {
-            cout << "Выберите режим работы" << endl << "1-Сортировка, 2-Фильтр, 3-Поиск самого солёного моря 0-Выход" << endl;
-            cin >> rabota;
+    int mode = -1;
+    while (mode != 4) {
+        cout << endl
+            << endl << "Меню: "
+            << endl << "1. Сортировка"
+            << endl << "2. Фильтр"
+            << endl << "3. Поиск самого солёного моря"
+            << endl << "4. Выйти из программы"
+            << endl;
+
+        cout << "Выбор: ";
+        cin >> mode;
+        if (mode < 1 || mode > 4) {
+            cout << "Введите значение из [1;4]!" << endl;
         }
         else {
-            break;
+            switch (mode) {
+            case 1:
+                sort(m.begin(), m.end(), compareSeaByName);
+                cout << "\nОтсортированный список:" << endl;
+                printm(m, len);
+                break;
+            case 2:
+                findinf(m, len);
+                break;
+            case 3:
+                cout << setw(30) << left << "Название" << setw(34) << "Глубина" << setw(38) << "Солёность" << endl << endl;
+                cout << setw(30) << left << m[vr.findssea(m, len)].name << setw(34) << m[vr.findssea(m, len)].glubina << setw(38) << m[vr.findssea(m, len)].solenost << endl << endl;
+                break;
+            }
         }
+
     }
     return 0;
 }
