@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="compareSeaByName.cpp" />
+    <ClCompile Include="findinf.cpp" />
+    <ClCompile Include="printm.cpp" />
+    <ClCompile Include="readall.cpp" />
+    <ClCompile Include="sea.cpp" />
     <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="compareSeaByName.h" />
+    <ClInclude Include="findinf.h" />
+    <ClInclude Include="printm.h" />
+    <ClInclude Include="readall.h" />
+    <ClInclude Include="sea.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
