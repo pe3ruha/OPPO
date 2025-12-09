@@ -22,8 +22,8 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     int len = 0;
-    regex rp1("\".*\""), rp2("-?\\d+\\.\\d+");
-    readall(in, rp1, rp2, vr, m, len);
+    regex rp1("\"[^\"]*[A-Za-zÀ-ßà-ÿ¨¸][^\"]*\""), rp2(R"([+-]?\d*\.\d+)"), rp3(R"((?:^|\s)(\d+)(?:\s|$))");
+    readall(in, rp1, rp2, rp3, vr, m, len);
     printm(m, len);
     int mode = -1;
     while (mode != 4) {
