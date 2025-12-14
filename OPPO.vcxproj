@@ -128,17 +128,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="compareSeaByName.cpp" />
-    <ClCompile Include="findinf.cpp" />
-    <ClCompile Include="printm.cpp" />
-    <ClCompile Include="readall.cpp" />
+    <ClCompile Include="FindSeaIndex.cpp" />
+    <ClCompile Include="FindSeaInfo.cpp" />
+    <ClCompile Include="PrintList.cpp" />
+    <ClCompile Include="PrintSeaHeader.cpp" />
+    <ClCompile Include="PrintSeaResult.cpp" />
+    <ClCompile Include="ReadAll.cpp" />
+    <ClCompile Include="ReadDepth.cpp" />
+    <ClCompile Include="ReadName.cpp" />
+    <ClCompile Include="ReadSalinity.cpp" />
+    <ClCompile Include="ReadSeaLine.cpp" />
+    <ClCompile Include="ReadSeaQuery.cpp" />
     <ClCompile Include="sea.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="compareSeaByName.h" />
-    <ClInclude Include="findinf.h" />
-    <ClInclude Include="printm.h" />
-    <ClInclude Include="readall.h" />
+    <ClInclude Include="FindSeaIndex.h" />
+    <ClInclude Include="FindSeaInfo.h" />
+    <ClInclude Include="PrintList.h" />
+    <ClInclude Include="PrintSeaHeader.h" />
+    <ClInclude Include="PrintSeaResult.h" />
+    <ClInclude Include="ReadAll.h" />
+    <ClInclude Include="ReadDepth.h" />
+    <ClInclude Include="ReadName.h" />
+    <ClInclude Include="ReadSalinity.h" />
+    <ClInclude Include="ReadSeaLine.h" />
+    <ClInclude Include="ReadSeaQuery.h" />
     <ClInclude Include="sea.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

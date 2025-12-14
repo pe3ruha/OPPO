@@ -1,6 +1,4 @@
 #pragma once
-#include "sea.h"
-
-
+#include "Sea.h"
 
 void FindSeaInfo(const vector<Sea>& list, int length, int& mode);

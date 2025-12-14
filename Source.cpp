@@ -9,9 +9,9 @@
 #include <algorithm>
 #include "sea.h"
 #include "compareSeaByName.h"
-#include "printm.h"
-#include "readall.h"
-#include "findinf.h"
+#include "PrintList.h"
+#include "ReadAll.h"
+#include "FindSeaInfo.h"
 using namespace std;
 
 int main() {
@@ -25,7 +25,7 @@ int main() {
 
     const regex kNameRegex("\".*\"");
     const regex kSalinityRegex("-?\\d+\\.\\d+");
-    const regex kDepthRegex("-?\\d+");
+    const regex kDepthRegex(R"([+-]?\d+\b)");
 
     seas = ReadAll(input, kNameRegex, kSalinityRegex, kDepthRegex);
     int length = seas.size();

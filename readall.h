@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sea.h"
+#include "Sea.h"
 
 
 
