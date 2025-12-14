@@ -2,4 +2,4 @@
 
 
 
-bool compareSeaByName(const sea& a, const sea& b);
+bool CompareSeaByName(const Sea& a, const Sea& b);

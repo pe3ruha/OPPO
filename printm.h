@@ -3,4 +3,4 @@
 
 
 
-void printm(vector<sea> m, int len);
+void PrintList(const vector<Sea>& list, int length);

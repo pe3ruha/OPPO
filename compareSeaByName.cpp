@@ -3,28 +3,21 @@
 
 
 
-bool compareSeaByName(const sea& a, const sea& b) {
-    // —оздаем строки без кавычек дл€ сравнени€
-    string A = a.name.substr(1, a.name.length() - 2);
-    string B = b.name.substr(1, b.name.length() - 2);
+bool CompareSeaByName(const Sea& a, const Sea& b) {
+    string nameA = a.name.substr(1, a.name.length() - 2);
+    string nameB = b.name.substr(1, b.name.length() - 2);
 
-    // –усский алфавит в правильном пор€дке
-    string russianAlphabet = "јЅ¬√ƒ≈®∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏџ№Ёёя";
+    const string kRussianAlphabet = "јЅ¬√ƒ≈®∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏџ№Ёёя";
 
+    char firstA = toupper(nameA[0]);
+    char firstB = toupper(nameB[0]);
 
-    // —равниваем по первому символу
-    char FA = toupper(A[0]);
-    char FB = toupper(B[0]);
+    size_t posA = kRussianAlphabet.find(firstA);
+    size_t posB = kRussianAlphabet.find(firstB);
 
-    // Ќаходим позиции в русском алфавите
-    size_t posA = russianAlphabet.find(FA);
-    size_t posB = russianAlphabet.find(FB);
-
-    // ≈сли оба символа русские, сравниваем по позиции в алфавите
     if (posA != string::npos && posB != string::npos) {
         return posA < posB;
     }
 
-    // ≈сли один из символов не русский, используем обычное сравнение
-    return A < B;
+    return nameA < nameB;
 }

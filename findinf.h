@@ -3,4 +3,4 @@
 
 
 
-void findinf(vector<sea> m, int len);
+void FindSeaInfo(const vector<Sea>& list, int length, int& mode);

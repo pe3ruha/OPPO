@@ -8,12 +8,12 @@
 
 using namespace std;
 
-class sea {
+class Sea {
 public:
     string name;
-    int glubina;
-    float solenost;
-    void print();
-    void read(istream& in, regex regN, regex regS, sea& vr);
-    int findssea(vector<sea> s, int len);
+    int depth;
+    float salinity;
+
+    void Print() const;
+    int FindMostSalty(const vector<Sea>& seas, int length) const;
 };

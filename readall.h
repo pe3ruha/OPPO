@@ -1,5 +1,7 @@
 #pragma once
+
 #include "sea.h"
 
 
-void readall(istream& in, regex rp1, regex rp2, regex rp3, sea& vr, vector<sea>& m, int& len);
+
+vector<Sea> ReadAll(istream& in, const regex& nameRegex, const regex& salRegex, const regex& depthRegex);
