@@ -1,4 +1,4 @@
-#include "sea.h"
+#include "Sea.h"
 
 void Sea::Print() const {
     cout << setw(30) << left << name << setw(34) << depth << setw(38) << salinity<< endl;

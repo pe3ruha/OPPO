@@ -10,7 +10,7 @@ bool ReadSalinity(const string& line, const regex& salRegex, Sea& temp, int line
 
     float value = stof(match.str(0));
     if (value < 0 || value > 100) {
-        cout << "Ошибка: Солёность 0–100. Строка " << lineNumber + 1 << endl;
+        cout << "Ошибка: Солёность 0–1001. Строка " << lineNumber + 1 << endl;
         return false;
     }
 
