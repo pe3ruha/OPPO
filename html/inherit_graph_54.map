@@ -1,0 +1,25 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$structtesting_1_1internal_1_1bool__constant.html" title=" " alt="" coords="5,304,160,347"/>
+<area shape="rect" id="Node000001" href="$structtesting_1_1internal_1_1_has_value_type_3_01_t_00_01_void_t_3_01typename_01_t_1_1value__type_01_4_01_4.html" title=" " alt="" coords="210,5,406,64"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="96,288,147,170,178,113,206,74,224,62,221,67,210,78,182,115,152,173,100,290"/>
+<area shape="rect" id="Node000003" href="$structtesting_1_1internal_1_1is__pointer_3_01_t_01_5_01_4.html" title=" " alt="" coords="249,88,367,131"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="97,288,139,214,170,175,206,141,226,128,250,120,247,124,228,133,209,145,174,178,144,217,102,291"/>
+<area shape="rect" id="Node000005" href="$structtesting_1_1internal_1_1is__same.html" title=" " alt="" coords="220,437,396,480"/>
+<area shape="poly" id="edge4_Node000000_Node000005" title=" " alt="" coords="116,355,160,390,209,423,234,436,229,437,206,428,157,395,117,360"/>
+<area shape="rect" id="Node000004" href="$structtesting_1_1internal_1_1is__same_3_01_t_00_01_t_01_4.html" title=" " alt="" coords="249,155,367,197"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="110,291,153,247,206,207,250,189,246,193,209,212,156,251,114,294"/>
+<area shape="rect" id="Node000006" href="$structtesting_1_1internal_1_1_has_value_type.html" title=" " alt="" coords="208,504,408,547"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="102,358,146,426,176,460,209,490,230,503,225,504,206,494,172,464,142,429,101,363"/>
+<area shape="rect" id="Node000007" href="$structtesting_1_1internal_1_1_is_recursive_container_impl_3_01_c_00_01false_00_01_h_v_01_4.html" title=" " alt="" coords="222,571,394,629"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="95,359,113,405,137,457,169,510,209,557,226,571,220,570,206,561,165,513,132,459,108,407,94,364"/>
+<area shape="rect" id="Node000008" href="$structtesting_1_1internal_1_1_is_recursive_container_impl_3_01_c_00_01true_00_01false_01_4.html" title=" " alt="" coords="222,221,394,280"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="162,296,223,277,219,281,165,301"/>
+<area shape="rect" id="Node000009" href="$structtesting_1_1internal_1_1is__pointer.html" title=" " alt="" coords="249,304,367,347"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="174,323,250,324,246,327,176,328"/>
+<area shape="rect" id="Node000010" href="$structtesting_1_1internal_1_1is__same.html" title=" " alt="" coords="249,371,367,413"/>
+<area shape="poly" id="edge10_Node000000_Node000010" title=" " alt="" coords="171,349,251,373,246,376,172,354"/>
+<area shape="rect" id="Node000002" href="$structtesting_1_1internal_1_1bool__constant.html" title=" " alt="" coords="8,88,157,131"/>
+<area shape="poly" id="edge11_Node000002_Node000001" title=" " alt="" coords="162,81,219,63,216,67,166,85"/>
+<area shape="poly" id="edge12_Node000002_Node000003" title=" " alt="" coords="171,107,250,108,246,111,173,112"/>
+<area shape="poly" id="edge13_Node000002_Node000004" title=" " alt="" coords="170,133,251,157,246,160,172,138"/>
+</map>

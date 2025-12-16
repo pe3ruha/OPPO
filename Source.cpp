@@ -1,3 +1,11 @@
+/**
+ * @file Source.cpp
+ * @brief Главный файл программы.
+ *
+ * Программа считывает данные о морях из файла
+ * и выводит их в табличном виде.
+ */
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -17,7 +25,6 @@ using namespace std;
 int main() {
     ifstream input("text.txt");
     vector<Sea> seas;
-    Sea temp;
 
     setlocale(LC_ALL, "Russian");
     SetConsoleCP(1251);
@@ -52,7 +59,7 @@ int main() {
         }
         else if (mode == 3) {
             Sea s;
-            int index = s.FindMostSalty(seas, length);
+            int index = s.FindMostSalty(seas);
 
             cout << setw(30) << left << "Название" << setw(34) << "Глубина"
                 << setw(38) << "Солёность" << endl

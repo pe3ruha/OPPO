@@ -1,0 +1,78 @@
+\doxysection{Sea Class Reference}
+\hypertarget{class_sea}{}\label{class_sea}\index{Sea@{Sea}}
+
+
+Класс, описывающий море и его основные характеристики.  
+
+
+
+
+{\ttfamily \#include $<$sea.\+h$>$}
+
+
+
+Collaboration diagram for Sea\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_sea__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sea_a8401d6b034e0d0f3d3794871afd1589c}\label{class_sea_a8401d6b034e0d0f3d3794871afd1589c} 
+void {\bfseries Print} () const
+\begin{DoxyCompactList}\small\item\em Выводит информацию о море в табличном виде. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_sea_a424d8d86ac47460c30079e17494bad28}{Find\+Most\+Salty}} (const std\+::vector$<$ \mbox{\hyperlink{class_sea}{Sea}} $>$ \&seas)
+\begin{DoxyCompactList}\small\item\em Находит самое солёное море. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sea_ae81dc42e945a3832ac6dbe84a0ef4e02}\label{class_sea_ae81dc42e945a3832ac6dbe84a0ef4e02} 
+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Название моря \end{DoxyCompactList}\item 
+\Hypertarget{class_sea_ad7213812e145c4b6e6c8de15939eb8d0}\label{class_sea_ad7213812e145c4b6e6c8de15939eb8d0} 
+int {\bfseries depth}
+\begin{DoxyCompactList}\small\item\em Максимальная глубина \end{DoxyCompactList}\item 
+\Hypertarget{class_sea_a1595d06e89f965e159c91a4e34420888}\label{class_sea_a1595d06e89f965e159c91a4e34420888} 
+int {\bfseries salinity}
+\begin{DoxyCompactList}\small\item\em Солёность. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, описывающий море и его основные характеристики. 
+
+\label{doc-func-members}
+\Hypertarget{class_sea_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sea_a424d8d86ac47460c30079e17494bad28}\index{Sea@{Sea}!FindMostSalty@{FindMostSalty}}
+\index{FindMostSalty@{FindMostSalty}!Sea@{Sea}}
+\doxysubsubsection{\texorpdfstring{FindMostSalty()}{FindMostSalty()}}
+{\footnotesize\ttfamily \label{class_sea_a424d8d86ac47460c30079e17494bad28} 
+int Sea\+::\+Find\+Most\+Salty (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_sea}{Sea}} $>$ \&}]{seas}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Находит самое солёное море. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seas} & Вектор морей \\
+\hline
+{\em length} & Количество элементов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Индекс самого солёного моря 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sea.\+h\item 
+sea.\+cpp\end{DoxyCompactItemize}
